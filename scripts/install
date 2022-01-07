@@ -157,10 +157,10 @@ usermod -a -G rvm zammad
 
 # Install Ruby 2.7.4
 # su - zammad
-sudo -u zammad rvm install ruby-2.7.4
+sudo -u zammad /usr/local/rvm/bin/rvm install ruby-2.7.4
 
 # Install bundler, rake and rails
-sudo -u zammad rvm use 2.7.4
+sudo -u zammad /usr/local/rvm/bin/rvm use 2.7.4
 sudo -u zammad gem install bundler rake rails
 
 #=================================================
@@ -207,6 +207,8 @@ chown -R $app:www-data "$final_path"
 
 cd "$final_path"
 sudo -u zammad bundle install --without test development postgres
+sudo -u zammad rake assets:precompile
+./script/systemd/install-zammad-systemd-services.sh
 
 #=================================================
 # NGINX CONFIGURATION
