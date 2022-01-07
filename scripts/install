@@ -157,7 +157,7 @@ usermod -a -G rvm zammad
 
 # Install Ruby 2.7.4
 # su - zammad
-sudo -u zammad /usr/local/rvm/bin/rvm install ruby-2.7.4
+/usr/local/rvm/bin/rvm install ruby-2.7.4
 
 # Install bundler, rake and rails
 sudo -u zammad /usr/local/rvm/bin/rvm use 2.7.4
