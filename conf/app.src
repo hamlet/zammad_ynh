@@ -1,7 +1,7 @@
-SOURCE_URL=url of app's source
-SOURCE_SUM=sha256 checksum
+SOURCE_URL=https://ftp.zammad.com/zammad-5.0.3.tar.gz
+SOURCE_SUM=bbae03268b6c26e1eb3b0bb307737089691f67307d6dedfdb8cc6376c9a06598
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
-SOURCE_IN_SUBDIR=true
+SOURCE_IN_SUBDIR=false
 SOURCE_FILENAME=
 SOURCE_EXTRACT=true
