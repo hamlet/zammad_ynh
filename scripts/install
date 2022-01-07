@@ -120,7 +120,7 @@ ynh_install_app_dependencies $pkg_dependencies
 ynh_script_progression --message="Configuring system user..." --time --weight=1
 
 # Create a system user
-ynh_system_user_create --username=$app --home_dir="$final_path"
+ynh_system_user_create --use_shell --username=$app --home_dir="$final_path"
 
 #=================================================
 # INSTALL Elasticsearch
@@ -157,11 +157,12 @@ usermod -a -G rvm zammad
 
 # Install Ruby 2.7.4
 # su - zammad
-/usr/local/rvm/bin/rvm install ruby-2.7.4
+# /usr/local/rvm/bin/rvm install ruby-2.7.4
 
 # Install bundler, rake and rails
 # sudo -u zammad /usr/local/rvm/bin/rvm use 3.7.4
-sudo -u zammad /usr/local/rvm/rubies/ruby-2.7.4/bin/gem install bundler rake rails
+# sudo -u zammad /usr/local/rvm/rubies/ruby-2.7.4/bin/gem install bundler rake rails
+su zammad -l -c "rvm install ruby-2.7.4 && rvm use 3.7.4 && gem install -N bundler rake rails"
 
 #=================================================
 # CREATE A MYSQL DATABASE
