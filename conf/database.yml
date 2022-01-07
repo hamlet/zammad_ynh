@@ -1,0 +1,8 @@
+production:
+  adapter: mysql2
+  database: __DB_NAME__
+  pool: 50
+  timeout: 5000
+  encoding: utf8
+  username: __DB_USER__
+  password: __DB_PWD__

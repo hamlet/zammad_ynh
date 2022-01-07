@@ -160,8 +160,8 @@ usermod -a -G rvm zammad
 /usr/local/rvm/bin/rvm install ruby-2.7.4
 
 # Install bundler, rake and rails
-sudo -u zammad /usr/local/rvm/bin/rvm use 2.7.4
-sudo -u zammad gem install bundler rake rails
+# sudo -u zammad /usr/local/rvm/bin/rvm use 3.7.4
+sudo -u zammad /usr/local/rvm/rubies/ruby-2.7.4/bin/gem install bundler rake rails
 
 #=================================================
 # CREATE A MYSQL DATABASE
