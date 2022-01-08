@@ -102,7 +102,7 @@ ynh_app_setting_set --app=$app --key=language --value=$language
 #=================================================
 # INSTALL DEPENDENCIES
 #=================================================
-ynh_script_progression --message="Installing dependencies..." --time --weight=300
+ynh_script_progression --message="Installing dependencies..." --time --weight=72
 
 ### `ynh_install_app_dependencies` allows you to add any "apt" dependencies to the package.
 ### Those deb packages will be installed as dependencies of this package.
@@ -145,7 +145,7 @@ echo "deb [signed-by=/etc/apt/trusted.gpg.d/pkgr-zammad.gpg] https://dl.packager
   tee /etc/apt/sources.list.d/zammad.list > /dev/null
 
 apt update
-apt install zammad=5.0.3
+apt install zammad=5.0.3-*
 
 
 ##=================================================
