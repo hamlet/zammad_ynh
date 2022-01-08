@@ -145,7 +145,7 @@ echo "deb [signed-by=/etc/apt/trusted.gpg.d/pkgr-zammad.gpg] https://dl.packager
   tee /etc/apt/sources.list.d/zammad.list > /dev/null
 
 apt update
-apt install zammad
+apt install zammad=5.0.3
 
 
 ##=================================================
